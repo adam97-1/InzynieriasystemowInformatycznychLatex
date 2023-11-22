@@ -1,0 +1,42 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper, left=25mm, right=25mm]{geometry}
+\usepackage{polski}
+\usepackage{graphicx}
+\usepackage{caption}
+\graphicspath{ {./images/} }
+\usepackage{hyperref}
+% \usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage{tocloft}
+\usepackage{booktabs} % Pakiet do lepszego formatowania tabeli
+\usepackage{tabularx}
+\usepackage{amssymb}
+\usepackage[ natbib=true, style=numeric,sorting=none]{biblatex}
+% \usepackage[natbib=true, style=numeric,sorting=none, maxnames=2, uniquelist=false]{biblatex}
+% \addbibresource{biblio.bib}
+
+
+
+% \renewcommand\cftsecfont{\normalfont}
+\renewcommand\cftsecpagefont{\normalfont}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftsecdotsep}}
+\renewcommand\cftsecdotsep{\cftdot}
+\renewcommand\cftsubsecdotsep{\cftdot}
+\renewcommand\cftsubsubsecdotsep{\cftdot}
+
+\begin{document}
+\input{TitlePage}
+
+\tableofcontents
+\addtocounter{page}{1}
+
+\newpage
+\section{Opis systemu}
+Nie każda osoba lubiąca czytać książki musi je kupować w księgarni. Istnieje wiele przyczyn, przez które lepszym rozwiązaniem jest wypożyczanie książek w~bibliotece. Jednymi z takich przyczyn może być ogólna brak dostępności wybranych pozycji w~księgarni lub nie wystarczającej ilości miejsca na biblioteczkę w mieszkaniu. Biblioteki spełnią ważne funkcje dla społeczeństwa. Daje ona szansę na pozyskiwanie wiedzy z~różnych dziedzin. Przez zwiekszenie czytelnictwa, zwiększa się zasób słownictwa jak i~wiedzy czytelników. Zwiekszenie zasobu słownictwa jak i~wiedzy pozwala na elokwentne wypowiedzi na wiele tematów. 
+
+W bibliotece zorganizowanej bez systemu informatycznego wszystkie dane muszą być przechowywane w szafkach oraz segregatorach. Używanie takiej bazy danych jet stosunkowo mało efektywne. Bibliotekarze którzy chcą sprawdzić dostępność książki, musą ręcznie przeszukać segregatory. Innym problemem w takim systemie jest trudność w~przechowywaniu takiej bazy danych. Szafki z segregatorami zajmują dużo miejsca, przez co często nie ma gdzie jch przechowywać. Podobny problem odnosi się do tworzenia kopi zapasowej. Tworzenie kopi zapasowej takiej bazy danych jest bardzo czasochłonne. Po stworzeniu tej kopi, nasuwa się pytanie co zrobić z już nieaktualną kopią danych? Przechowywanie takich kopi zajmuje dużo miejsca, dla tego taka biblioteka nie będzie w stanie przechowywane takich kopi. Natomiast usunięcie starch kopi zapasowych jest kosztowne i~czasochłonne. Najwygodniejszym rozwiązaniem było by nie wykonywanie kopi zapasowych danych, ale czy jest to rozsądne?
+
+Przejscie na system informatyczny przynosi wiele korzyści. Nie jest wymagane miejsce na przechlanie danych w~forme segregatorów. Poprzez zwolnienie miejsca które było wykorzystane do przechowywania danych, można zwiększyć ilość dostępnych książek w~księgarni. Następną korzyścią jest możliwość wygodnego przechowywania jak i zażądanie kopią zapasową bazy danych. Po za tym, za pomoca systemu informatycznego jest możliwość powiadomienie użytkownika o~zbliżającym terminie oddania książki, przedłużenie wypozyczenia książki, zarezerwowanie konkretnej książki itp. System informatyczny pozwala te wszystkie czynności wykonywać za pomoca aplikacji internetowa. Do korzystania z~tej aplikacji wystarczy dostęp do internetu oraz przeglądarka internetowa. Jest to wygody sposób do korzystania z~tego systemu prze użytkownika.
+
+
+\end{document}
