@@ -11,7 +11,8 @@
 \usepackage{booktabs} % Pakiet do lepszego formatowania tabeli
 \usepackage{tabularx}
 \usepackage{amssymb}
-\usepackage[ natbib=true, style=numeric,sorting=none]{biblatex}
+% \usepackage{tocloft}
+% \usepackage[ natbib=true, style=numeric,sorting=none]{biblatex}
 % \usepackage[natbib=true, style=numeric,sorting=none, maxnames=2, uniquelist=false]{biblatex}
 % \addbibresource{biblio.bib}
 
@@ -38,5 +39,33 @@ W bibliotece zorganizowanej bez systemu informatycznego wszystkie dane muszą by
 
 Przejscie na system informatyczny przynosi wiele korzyści. Nie jest wymagane miejsce na przechlanie danych w~forme segregatorów. Poprzez zwolnienie miejsca które było wykorzystane do przechowywania danych, można zwiększyć ilość dostępnych książek w~księgarni. Następną korzyścią jest możliwość wygodnego przechowywania jak i zażądanie kopią zapasową bazy danych. Po za tym, za pomoca systemu informatycznego jest możliwość powiadomienie użytkownika o~zbliżającym terminie oddania książki, przedłużenie wypozyczenia książki, zarezerwowanie konkretnej książki itp. System informatyczny pozwala te wszystkie czynności wykonywać za pomoca aplikacji internetowa. Do korzystania z~tej aplikacji wystarczy dostęp do internetu oraz przeglądarka internetowa. Jest to wygody sposób do korzystania z~tego systemu prze użytkownika.
 
+\section{Fukcjonalności systemu}
+\begin{enumerate}
+    \item System przechowuje informacje o dostępnych książkach, ich autorach, numerach ISBN, wydawcach, kategoriach i dostępności.
+    \item System dodaje nowe pozycje do katalogu.
+    \item System umożliwia użytkownikom wypożyczanie książek z biblioteki poprzez zapisywanie informacji o wypożyczonych pozycjach.
+    \item System pozwala czytelnikom rezerwować książki, które są aktualnie niedostępne, umożliwiając im otrzymanie powiadomienia, gdy pozycja zostanie zwrócona i będzie ponownie dostępna.
+    \item System może obsługiwać zasoby cyfrowe, takie jak e-booki, artykuły elektroniczne czy audiobooki, umożliwiając ich wypożyczanie lub dostęp online.
+    \item System umożliwia czytelnikom dodawanie recenzji oraz ocenianie książek, co pomaga innym w wyborze odpowiednich pozycji.
+    \item System umożliwia genetowanie raportów dotyczących popularności książek, aktywności czytelników, trendów czy wolumenu wypożyczeń. To przydatne narzędzie do planowania zakupów nowych książek.
+    \item System umożliwia obsługę wielu oddziałó, system może integrować zarządzanie wszystkimi lokalizacjami, umożliwiając np. transfer książęk między nimi.
+    \item System umożliwia obsługę opłat za kary, usługi czy też zakupy książek przez czytelników.
+    \item Interfejs dla pracowników i czytelników zapewnia łatwy dostęp do systemu zarówno dla pracowników obsługujących bibliotekę, jak i dla czytelników korzystających z usług.
+\end{enumerate}
+\newpage
+\section{Diagram DFD}
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.75\textwidth]{Schemat}
+    \caption{Diagram DFD  poziomu 0 dla biblioteki.}
+\end{figure}
+
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.75\textwidth]{Schemat2}
+    \includegraphics[width=0.75\textwidth]{Schemat3}
+    \caption{Diagram DFD poziomu 1 dla dla biblioteki.}
+\end{figure}
 
 \end{document}
