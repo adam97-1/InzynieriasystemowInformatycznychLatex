@@ -48,7 +48,7 @@ Przejscie na system informatyczny przynosi wiele korzyści. Nie jest wymagane mi
     \item System może obsługiwać zasoby cyfrowe, takie jak e-booki, artykuły elektroniczne czy audiobooki, umożliwiając ich wypożyczanie lub dostęp online.
     \item System umożliwia czytelnikom dodawanie recenzji oraz ocenianie książek, co pomaga innym w wyborze odpowiednich pozycji.
     \item System umożliwia genetowanie raportów dotyczących popularności książek, aktywności czytelników, trendów czy wolumenu wypożyczeń. To przydatne narzędzie do planowania zakupów nowych książek.
-    \item System umożliwia obsługę wielu oddziałó, system może integrować zarządzanie wszystkimi lokalizacjami, umożliwiając np. transfer książęk między nimi.
+    \item System umożliwia obsługę wielu oddziałów, system może integrować zarządzanie wszystkimi lokalizacjami, umożliwiając np. transfer książęk między nimi.
     \item System umożliwia obsługę opłat za kary, usługi czy też zakupy książek przez czytelników.
     \item Interfejs dla pracowników i czytelników zapewnia łatwy dostęp do systemu zarówno dla pracowników obsługujących bibliotekę, jak i dla czytelników korzystających z usług.
 \end{enumerate}
@@ -63,9 +63,86 @@ Przejscie na system informatyczny przynosi wiele korzyści. Nie jest wymagane mi
 
 \begin{figure}[!h]
     \centering
-    \includegraphics[width=0.75\textwidth]{Schemat2}
-    \includegraphics[width=0.75\textwidth]{Schemat3}
-    \caption{Diagram DFD poziomu 1 dla dla biblioteki.}
+    \includegraphics[width=0.75\textwidth]{Schemat_Bank}
+    \caption{Diagram biblioteki DFD poziomu 1 dla Bank.}
 \end{figure}
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.75\textwidth]{Schemat_Guest}
+    \caption{Diagram biblioteki DFD poziomu 1 dla Guest.}
+\end{figure}
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.75\textwidth]{Schemat_Client}
+    \caption{Diagram biblioteki DFD poziomu 1 dla Client.}
+\end{figure}
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.75\textwidth]{Schemat_Librarian}
+    \caption{Diagram biblioteki DFD poziomu 1 dla Librarian.}
+\end{figure}
+
+
+\newpage, \clearpage
+\newpage
+Diagramy przepływów danych poziomu 0, przedstawia przepływ danych pomiędzy systemem biblioteki a terminatorami:
+\begin{itemize}
+    \item Bank - system bankowy służący do powiedzenia płatności
+    \item Bibliotekarz - użytkownik który zarządza systemem. Ten użytkownik może dodawać nowe książki do systemu
+    \item Gość - użytkownik który ma ograniczony wgląd do zawartości systemu. Funkcje gościa są ograniczone do przeglądania recenzji
+    \item Klient - użytkownik który korzysta z systemu. Ma on dostęp do większości funkcji systemu. Ten użytkownik może przeglądać wystawiać recenzje, oraz wypożyczać książki
+\end{itemize}
+
+Diagramy przepływów danych poziomu 1, przedstawia przepływ danych pomiędzy magazynami danych, procesami i terminatorami. Każda operacja którą mają do dyspozycji jest wykonywana przed odpowiedni do tego proces.
+
+\newpage
+\section{Diagram ERD}
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.75\textwidth]{Schemat_ERD}
+    \caption{Diagram ERD dla biblioteki.}
+\end{figure}
+
+Diagram ERD składa się z 9 encji.
+Są to encje:
+\begin{itemize}
+    \item Książka – to główna encja zawierająca atrybuty takie jak: id, tytuł, autor, recenzje, status,  gatunku, ISBN, i edycji.
+    \item Autor – encja zawierająca atrybuty id, imienia i nazwiska oraz daty urodzenia autora danych książek.
+    \item Biblioteka – jest to encja zawierająca atrybuty: książka, bibliotekarze, liczba książek
+    \item Bibliotekarz – encja zawierająca takie atrybuty jak id, imię i nazwisko.
+    \item Klient – encja zawierająca atrybuty: id, imię, nazwisko, email, numer telefonu oraz adres.
+    \item Zarezerwowana Książka – encja zawierająca informację o zarezerwowanej książce: id klienta, id książki, datę rezerwacji
+    \item Wypożyczona Książka – to encja zawierająca informację o wypożyczonej książce: id klienta, id książki, datę wypożyczenia
+    \item Recenzja – encja zawierająca atrybuty dotyczące recenzji książki: id książki, id klienta, recenzja
+    \item Kara – encja zawiera atrybuty, dotyczące długości przetrzymywania książki oraz kary związanej za długie jej przetrzymywanie: id klienta, id książki, data wypożyczenia, Kara
+\end{itemize}
+Każda Encja jest powiązana z innymi encjami odpowiednimi związkami:
+
+\begin{itemize}
+    \item Bibliotekarz i Biblioteka – 1 do wielu: jedna biblioteka może mieć wielu bibliotekarzy.
+    \item Autor i Książka – 1 do wielu: jeden autor może mieć wiele książek.
+    \item Książka i Biblioteka – wiele do jednego: jedna biblioteka może mieć wiele książek.
+    \item Zarezerwowana Książka i Książka – jeden do jednego: jedna książka może być zarezerwowana tylko raz.
+    \item Wypożyczona Książka i Książka – jeden do jednego: książka może być wypożyczona tylko raz.
+    \item Książka i Recenzja – jeden do wielu: jedna książka może mieć wiele recenzji.
+    \item Klient i Recenzja – jeden do wielu: jeden klient może mieć wiele recenzji książek.
+    \item Klient i Zarezerwowana Książka – jeden do wielu: jeden klient może mieć zarezerwowane wiele książek.
+    \item Klient i Wypożyczona Książka – jeden do wielu: jeden klient może mieć wiele wypożyczonych książek.
+    \item Klient, Kara – jeden do wielu: jeden klient może mieć wiele kar.
+    \item Kara i Wypożyczona Książka – jeden do jednego: jedna książka może mieć jedną karę.
+\end{itemize}
+
+
+\newpage
+\section{Diagram STD}
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.75\textwidth]{Schemat_STD}
+    \caption{Diagram STD dla biblioteki.}
+\end{figure}
+
 
 \end{document}
