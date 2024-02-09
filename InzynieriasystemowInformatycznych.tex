@@ -144,5 +144,120 @@ Każda Encja jest powiązana z innymi encjami odpowiednimi związkami:
     \caption{Diagram STD dla biblioteki.}
 \end{figure}
 
+\section{Słownik danych}
+\subsection*{Encje Systemu Biblioteki}
+\begin{table}[!ht]
+    \centering
+    \begin{tabularx}{1.01\textwidth}{llll}
+        \toprule
+        Nazwa Encji & Nazwa Atrybutu & Typ Danych &Definicja \\
+        \bottomrule
+        \toprule
+        Author & Id & Integer & Unikalny identyfikator autora książki \\
+        \bottomrule
+        Author & Name & String & Imię autora książki \\
+        \bottomrule
+        Author & LastName & String & Nazwisko autora książki \\
+        \bottomrule
+        Author & DateOfBirth & Date & Data urodzin autora książki \\
+        \bottomrule
+        Book & Id & Integer & Unikalny identyfikator książki \\
+        \bottomrule
+        Book & Title & String & Tytuł książki \\
+        \bottomrule
+        Book & Author & String & Autor książki \\
+        \bottomrule
+        Book & Borrowed & Integer & Informacja na temat wypożyczenia \\
+         &  &  &                    książki \\
+        \bottomrule
+        Book & Reserved & Integer & Informacja na temat zarezerwowania \\
+        &  &  &                    książki \\
+        \bottomrule
+        Book & Genre & String & Gatunek książki \\
+        \bottomrule
+        Book & ISBN & Integer & Unikalny numer identyfikacyjny \\
+        &  &  &                    książki \\
+        \bottomrule
+        Book & Edtiton & String & Wydanie książki \\
+        \bottomrule
+        BorrowedBook & BookId & Integer & Unikalny identyfikator książki \\
+        \bottomrule
+        BorrowedBook & ClientId & Integer & Unikalny identyfikator czytelnika \\
+        \bottomrule
+        BorrowedBook & BorrowedDate & Date & Data wypożyczenia książki \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+\newpage
+\begin{table}[!ht]
+    \centering
+    \begin{tabularx}{1.01\textwidth}{llll}
+        \toprule
+        Nazwa Encji & Nazwa Atrybutu & Typ Danych &Definicja \\
+        \bottomrule
+        \toprule
+        Client & Id & Integer & Unikalny identyfikator czytelnika \\
+        \bottomrule
+        Client & Name & String & Imię czytelnika \\
+        \bottomrule
+        Client & LastName & String & Nazwisko czytelnika \\
+        \bottomrule
+        Client & E-mail & String & E-mail czytelnika \\
+        \bottomrule
+        Client & PhoneNumber & Integer & Numer telefonu czytelnika \\
+        \bottomrule
+        Client & Adress & String & Adres zamieszkania czytelnika \\
+        \bottomrule
+        Fine & ClientIdPojęcia & Integer & Unikalny identyfikator czytelnika \\
+        \bottomrule
+        Fine & BookId & Integer & Unikalny identyfikator książki \\
+        \bottomrule
+        Fine & DaysOfDellay & Integer & Liczba dni opóźnienia \\
+        \bottomrule
+        Fine & FineToPay & Decimal & Kwota do zapłacenia za opóźnienie \\
+        \bottomrule
+        Librarian & Id & Integer & Unikalny identyfikator bibliotekarza \\
+        \bottomrule
+        Librarian & Name & String & Imię bilbiotekarza \\
+        \bottomrule
+        Librarian & LastName & String & Nazwisko bibliotekarza \\
+        \bottomrule
+        Library & BookId & Integer & Unikalny identyfikator książki \\
+        \bottomrule
+        Library & LibrarianId & Integer & Unikalny identyfikator bibliotekarza \\
+        \bottomrule
+        Library & NumberOfBooks & Integer & Liczba książek \\
+        \bottomrule
+        Reserved Book & BookId & Integer & Unikalny identyfikator książki \\
+        \bottomrule
+        Reserved Book & ClientId & Integer & Unikalny identyfikator czytelnika \\
+        \bottomrule
+        Reserved Book & DateOfReservation & Date & Data rezerwacji \\
+        \bottomrule
+        Review & ClientId & Integer & Unikalny identyfikator czytelnika \\
+        \bottomrule
+        Review & Review & String & Recenzja \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+\subsection*{Pojęcia}
+\begin{table}[!ht]
+    \centering
+    \begin{tabularx}{1.01\textwidth}{ll}
+        \toprule
+        Diagram DFD           & Narzędzie wykorzystywane do modelowania przepływu danych.  \\
+        Diagram ERD                       & UNarzędzie wykorzystywane do projektowania baz danych, \\
+         & ich struktur i relacji między nimi.\\
+        Diagram STD            & Narzędzie do analizy i projektowania oprogramowania ukazujący \\
+         & obiekty i stany, w których się znajdują oraz proces przejść, \\
+         & które zmieniają stan obiektu.  \\
+        System informatyczny        & Złożony zbiór powiązanych elementów, które współpracują \\
+        & w celu przetwarzania danych i realizacji określonych zadań. \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+
 
 \end{document}
