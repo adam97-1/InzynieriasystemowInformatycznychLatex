@@ -141,9 +141,12 @@ Każda Encja jest powiązana z innymi encjami odpowiednimi związkami:
 \begin{figure}[!h]
     \centering
     \includegraphics[width=0.75\textwidth]{Schemat_STD}
-    \caption{Diagram STD dla biblioteki.}
+    \caption{Diagram STD dla książek.}
 \end{figure}
 
+Diagram przedstawia stany w jakich może przebywać książka. Po dodaniu książki, jest oda dostępna w systemie do wyporzyczenia. Książka może być wyporzyzona od razu przez urzytkownika albo stać zarezewowana. Urzytkownik może zrezygnować z wyporzyczenia książki. Wtym przypadku skiążka staje się dostępna w systemie. Po zwroceie skążki jest przeprowadzona weryfikacja stanu. Jeżeli książka nie danaje się już do dalszego urzytkowania przechodzi w stan wycofania.
+
+\newpage
 \section{Słownik danych}
 \subsection*{Encje Systemu Biblioteki}
 \begin{table}[!ht]
@@ -274,6 +277,18 @@ Każda Encja jest powiązana z innymi encjami odpowiednimi związkami:
     \end{tabularx}
 \end{table}
 
+\subsection*{Stany książki}
+\begin{table}[!ht]
+    \centering
+    \begin{tabularx}{1.01\textwidth}{ll}
+        \toprule
+        Available           & Urzytkownik może wyporzyczyć albo zarezerwować książkę.  \\
+        Reserved            & Urztkownik zarezerwował książkę. Następnie może odebrać książkę albo anulować rezerwację. \\
+        Borrowed            & Urzytkownik ma wyporzyzoną książkę.  \\
+        Removed        &  Książka nie dadaje się do dalszego urzytkowania. \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
 
 
 \end{document}
